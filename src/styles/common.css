@@ -56,7 +56,9 @@ body {
   margin-top: 2rem;
 }
 .link {
-  display: block;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
   padding-block: calc(var(--space-unit) * 2);
   padding-inline: calc(var(--space-unit) * 3);
   border-radius: calc(var(--space-unit) * 1);
@@ -68,4 +70,7 @@ body {
   border-color: currentColor;
   outline: 2px solid currentColor;
   outline-offset: 0;
+}
+.link:is(:hover, :focus, :focus-visible) .icon-arrow-right path {
+  color: #000082;
 }
