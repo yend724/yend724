@@ -1,0 +1,22 @@
+{
+  "name": "yend724",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.3.3",
+    "@astrojs/mdx": "^2.0.2",
+    "@astrojs/rss": "^4.0.1",
+    "@astrojs/sitemap": "^3.0.3",
+    "@fontsource/noto-sans-jp": "^5.0.17",
+    "astro": "^4.0.7",
+    "destyle.css": "^4.0.0",
+    "typescript": "^5.3.3"
+  }
+}
