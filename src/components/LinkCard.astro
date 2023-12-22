@@ -7,9 +7,10 @@ type Props = {
 const { label, href } = Astro.props;
 const isExternal = href.startsWith('http');
 const rel = isExternal ? 'noopener noreferrer' : undefined;
+const target = isExternal ? '_blank' : undefined;
 ---
 
-<a class="link" href={href} rel={rel}>{label}<ArrowRight /></a>
+<a class="link" href={href} rel={rel} target={target}>{label}<ArrowRight /></a>
 
 <style>
   .link {
