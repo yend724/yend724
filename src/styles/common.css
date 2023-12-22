@@ -20,6 +20,12 @@
   --space-unit: 0.5rem;
 }
 * {
+  box-sizing: border-box;
+}
+html,
+body {
+  min-height: 100vh;
+  background-color: var(--color-sumi-100);
   color: var(--color-sumi-900);
   font-family: 'Noto Sans JP', sans-serif;
   font-style: normal;
@@ -29,48 +35,4 @@
   font-weight: var(--font-weight-regular);
   line-height: 1.7;
   letter-spacing: 0.04em;
-  box-sizing: border-box;
-}
-html,
-body {
-  min-height: 100vh;
-  background-color: var(--color-sumi-100);
-}
-.container {
-  max-width: 57.5rem;
-  margin-inline: auto;
-  padding-block: calc(var(--space-unit) * 4);
-  padding-inline: calc(var(--space-unit) * 3);
-}
-.page-title {
-  font-size: var(--heading-l);
-  font-weight: var(--font-weight-bold);
-  line-height: 1.4;
-  letter-spacing: 0.04em;
-  text-align: center;
-}
-.link-list {
-  display: grid;
-  grid-template-columns: 1;
-  grid-gap: calc(var(--space-unit) * 3);
-  margin-top: 2rem;
-}
-.link {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  padding-block: calc(var(--space-unit) * 2);
-  padding-inline: calc(var(--space-unit) * 3);
-  border-radius: calc(var(--space-unit) * 1);
-  border: 1px solid #949497;
-  background-color: var(--color-white);
-}
-.link:is(:hover, :focus, :focus-visible) {
-  color: #000082;
-  border-color: currentColor;
-  outline: 2px solid currentColor;
-  outline-offset: 0;
-}
-.link:is(:hover, :focus, :focus-visible) .icon-arrow-right path {
-  color: #000082;
 }

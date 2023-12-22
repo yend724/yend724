@@ -1,30 +1,32 @@
 ---
-import 'destyle.css';
-import '@fontsource/noto-sans-jp/400.css';
-import '@fontsource/noto-sans-jp/500.css';
-import '../styles/common.css'
-
-import ArrowRight from '../components/Icon/ArrowRight.astro'
+import Layout from '../Layouts/Layout.astro';
+import Stack from '../components/Stack.astro';
+import LinkCard from '../components/LinkCard.astro';
 ---
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>YEND Profile</title>
-  </head>
-  <body>
-    <div class="wrapper">
-      <main class="main">
-        <div class="container">
-          <h1 class="page-title">YEND</h1>
-          <div class="link-list">
-            <a class="link" href="https://twitter.com/yend724">X（Twitter）<ArrowRight /></a>
-            <a class="link" href="https://github.com/yend724">GitHub<ArrowRight /></a>
-            <a class="link" href="https://zenn.dev/yend724">Zenn<ArrowRight /></a>
-          </div>
-        </div>
-      </main>
-    </div>
-	</body>
-</html>
+
+<Layout>
+  <h1 class="page-title">YEND</h1>
+  <Stack>
+    <LinkCard label="X（Twitter）" href="https://twitter.com/yend724" />
+    <LinkCard label="GitHub" href="https://github.com/yend724" />
+    <LinkCard label="Zenn" href="https://zenn.dev/yend724" />
+  </Stack>
+</Layout>
+
+<style>
+  .container {
+    display: grid;
+    row-gap: calc(var(--space-unit) * 4);
+    max-width: 57.5rem;
+    margin-inline: auto;
+    padding-block: calc(var(--space-unit) * 4);
+    padding-inline: calc(var(--space-unit) * 3);
+  }
+  .page-title {
+    font-size: var(--heading-l);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.4;
+    letter-spacing: 0.04em;
+    text-align: center;
+  }
+</style>

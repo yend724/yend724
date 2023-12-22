@@ -1,0 +1,29 @@
+---
+import ArrowRight from './Icon/ArrowRight.astro';
+type Props = {
+  label: string;
+  href: string;
+};
+const { label, href } = Astro.props;
+---
+
+<a class="link" href={href}>{label}<ArrowRight /></a>
+
+<style>
+  .link {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding-block: calc(var(--space-unit) * 2);
+    padding-inline: calc(var(--space-unit) * 3);
+    border-radius: calc(var(--space-unit) * 1);
+    border: 1px solid #949497;
+    background-color: var(--color-white);
+  }
+  .link:is(:hover, :focus, :focus-visible) {
+    color: #000082;
+    border-color: currentColor;
+    outline: 2px solid currentColor;
+    outline-offset: 0;
+  }
+</style>

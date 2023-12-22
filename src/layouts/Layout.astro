@@ -1,0 +1,35 @@
+---
+import 'destyle.css';
+import '@fontsource/noto-sans-jp/400.css';
+import '@fontsource/noto-sans-jp/500.css';
+import '../styles/common.css';
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YEND Profile</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <main class="main">
+        <div class="container">
+          <slot />
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
+
+<style>
+  .container {
+    display: grid;
+    row-gap: calc(var(--space-unit) * 4);
+    max-width: 57.5rem;
+    margin-inline: auto;
+    padding-block: calc(var(--space-unit) * 4);
+    padding-inline: calc(var(--space-unit) * 3);
+  }
+</style>
