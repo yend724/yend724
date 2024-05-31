@@ -1,5 +1,4 @@
 ---
-import 'destyle.css';
 import '@fontsource/noto-sans-jp/400.css';
 import '@fontsource/noto-sans-jp/500.css';
 import '@/styles/common.css';
@@ -13,24 +12,9 @@ import '@/styles/common.css';
     <title>YEND Profile</title>
     <link rel="icon" type="image/png" href="/favicon.png" />
   </head>
-  <body>
-    <div class="wrapper">
-      <main class="main">
-        <div class="container">
-          <slot />
-        </div>
-      </main>
-    </div>
+  <body class="bg-white min-h-svh px-4 py-10">
+    <main class="max-w-[48rem] mx-auto block w-full">
+      <slot />
+    </main>
   </body>
 </html>
-
-<style>
-  .container {
-    display: grid;
-    row-gap: calc(var(--space-unit) * 4);
-    max-width: 57.5rem;
-    margin-inline: auto;
-    padding-block: calc(var(--space-unit) * 4);
-    padding-inline: calc(var(--space-unit) * 3);
-  }
-</style>

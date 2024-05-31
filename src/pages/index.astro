@@ -1,32 +1,14 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import Stack from '@/components/Stack.astro';
 import LinkCard from '@/components/LinkCard.astro';
+import PageTitle from '@/components/PageTitle.astro';
 ---
 
 <Layout>
-  <h1 class="page-title">YEND</h1>
-  <Stack>
-    <LinkCard label="X（Twitter）" href="https://twitter.com/yend724" />
+  <PageTitle>YEND</PageTitle>
+  <div class="grid gap-y-8 py-8">
+    <LinkCard label="X（旧Twitter）" href="https://x.com/yend724" />
     <LinkCard label="GitHub" href="https://github.com/yend724" />
     <LinkCard label="Zenn" href="https://zenn.dev/yend724" />
-  </Stack>
+  </div>
 </Layout>
-
-<style>
-  .container {
-    display: grid;
-    row-gap: calc(var(--space-unit) * 4);
-    max-width: 57.5rem;
-    margin-inline: auto;
-    padding-block: calc(var(--space-unit) * 4);
-    padding-inline: calc(var(--space-unit) * 3);
-  }
-  .page-title {
-    font-size: var(--heading-l);
-    font-weight: var(--font-weight-bold);
-    line-height: 1.4;
-    letter-spacing: 0.04em;
-    text-align: center;
-  }
-</style>

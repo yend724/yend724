@@ -10,25 +10,11 @@ const rel = isExternal ? 'noopener noreferrer' : undefined;
 const target = isExternal ? '_blank' : undefined;
 ---
 
-<a class="link" href={href} rel={rel} target={target}>{label}<ArrowRight /></a>
-
-<style>
-  .link {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    padding-block: calc(var(--space-unit) * 2);
-    padding-inline: calc(var(--space-unit) * 3);
-    border-radius: calc(var(--space-unit) * 1);
-    border: 1px solid #949497;
-    background-color: var(--color-white);
-  }
-  @media (any-hover: hover) {
-    .link:is(:hover, :focus, :focus-visible) {
-      color: #000082;
-      border-color: currentColor;
-      outline: 2px solid currentColor;
-      outline-offset: 0;
-    }
-  }
-</style>
+<a
+  class="border border-blue-1000 rounded p-4 flex items-center justify-between text-blue-1000
+  hover:bg-blue-50 hover:underline
+  focus-visible:rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-focus-yellow"
+  href={href}
+  rel={rel}
+  target={target}>{label}<ArrowRight /></a
+>

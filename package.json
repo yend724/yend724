@@ -14,9 +14,12 @@
     "@astrojs/mdx": "^2.0.2",
     "@astrojs/rss": "^4.0.1",
     "@astrojs/sitemap": "^3.0.3",
+    "@astrojs/tailwind": "^5.1.0",
+    "@digital-go-jp/tailwind-theme-plugin": "^0.1.15",
     "@fontsource/noto-sans-jp": "^5.0.17",
     "astro": "^4.0.7",
     "destyle.css": "^4.0.0",
+    "tailwindcss": "^3.4.3",
     "typescript": "^5.3.3"
   }
 }
