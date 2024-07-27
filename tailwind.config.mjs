@@ -4,12 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: [
-          'Noto Sans JP',
-          '-apple-system',
-          'BlinkMacSystemFont',
-          'sans-serif',
-        ],
+        sans: ['-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
       },
     },
   },
