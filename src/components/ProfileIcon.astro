@@ -1,0 +1,19 @@
+---
+import { Image } from 'astro:assets';
+import Img from '@/assets/profile-icon.png';
+---
+
+<div
+  class="rounded-full overflow-clip bg-gradient-to-br p-0.5 w-20 h-20
+  from-sky-300 to-sky-400
+  dark:from-sky-500 dark:to-sky-600"
+>
+  <div class="rounded-full overflow-clip">
+    <Image
+      src={Img}
+      alt="YENDのプロフィールアイコンであるスナメリのイラスト"
+      width={80}
+      height={80}
+    />
+  </div>
+</div>
