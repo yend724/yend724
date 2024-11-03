@@ -19,5 +19,5 @@ jobs:
 
       - name: Create empty commit
         run: |
-          git commit --allow-empty -m "empty"
+          git commit --allow-empty -m "trigger daily deploy"
           git push origin ${{ github.ref }}
