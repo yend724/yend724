@@ -1,9 +1,8 @@
 name: Daily Empty Commit
-
 on:
   schedule:
-    - cron: '0 0 * * *' # 毎日午前0時（UTC）に実行
-
+    # 毎日午後0時（JST）に実行
+    - cron: '0 15 * * *'
 jobs:
   daily-empty-commit:
     runs-on: ubuntu-latest
