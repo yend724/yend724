@@ -3,8 +3,8 @@ import ProfileIconImage from '@/assets/images/profile-icon.png';
 
 export const ProfileIcon = () => {
   return (
-    <div className="rounded-full overflow-clip bg-gradient-to-br p-0.5 w-20 h-20 from-sky-300 to-sky-400 dark:from-sky-500 dark:to-sky-600">
-      <div className="rounded-full overflow-clip">
+    <div className="size-20 text-clip rounded-full bg-gradient-to-br from-sky-300 to-sky-400 p-0.5 dark:from-sky-500 dark:to-sky-600">
+      <div className="text-clip rounded-full">
         <Image
           src={ProfileIconImage}
           width={512}

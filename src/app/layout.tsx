@@ -15,8 +15,8 @@ export default function RootLayout({
         <link rel="icon" href={FaviconIcon.src} sizes="any" />
         <title>YEND Profile</title>
       </head>
-      <body className="bg-white min-h-svh px-4 py-10 text-slate-600 antialiased dark:text-slate-300 dark:bg-slate-900">
-        <main className="max-w-[48rem] mx-auto block w-full">{children}</main>
+      <body className="min-h-svh bg-white px-4 py-10 text-slate-600 antialiased dark:bg-slate-900 dark:text-slate-300">
+        <main className="mx-auto block w-full max-w-5xl">{children}</main>
       </body>
     </html>
   );

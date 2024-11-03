@@ -5,7 +5,7 @@ type Props = {
 export const PageTitle: React.FC<Props> = ({ title, description }) => {
   return (
     <div>
-      <h1 className="text-left font-semibold text-xl text-wrap text-black dark:text-white">
+      <h1 className="text-wrap text-left text-xl font-semibold text-black dark:text-white">
         {title}
       </h1>
       <p>{description}</p>
