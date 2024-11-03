@@ -1,21 +1,14 @@
 import { ZennRSSFeedItem } from '../../types';
 import Image from 'next/image';
-import Link from 'next/link';
-
-import { isAbsolutePath } from '@/utils/isAbsolutePath';
+import { Link } from '@/components/link';
 
 type Props = {
   article: ZennRSSFeedItem;
 };
 export const ZennArticleCard: React.FC<Props> = ({ article }) => {
-  const isAbsolute = isAbsolutePath(article.link);
   return (
     <article key={article.guid}>
-      <Link
-        href={article.link}
-        target={isAbsolute ? '_blank' : undefined}
-        rel={isAbsolute ? 'noopener noreferrer' : undefined}
-      >
+      <Link href={article.link}>
         <Image
           src={article.enclosure?.url ?? ''}
           alt={article.title}

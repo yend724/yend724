@@ -1,11 +1,11 @@
 import Parser from 'rss-parser';
-const parser = new Parser();
-
 import { ZennRSSFeedItem } from '../types';
 
-export const getZennArticles = async () => {
+const parser = new Parser();
+
+export const getZennArticles = async (params?: { limit?: number }) => {
   const feed = await parser.parseURL('https://zenn.dev/yend724/feed?all=1');
-  const articles = feed.items.map(item => {
+  const articles = feed.items.slice(0, params?.limit).map(item => {
     return item as ZennRSSFeedItem;
   });
   return { articles };

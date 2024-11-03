@@ -1,12 +1,12 @@
 import { ProfileIcon } from '@/components/profile-icon';
 import { PageTitle } from '@/components/page-title';
 import { LinkTag } from '@/components/link-tag';
-
+import { Link } from '@/components/link';
 import { ZennArticles } from '@/features/zenn-articles/components';
 
 const Home = async () => {
   return (
-    <div className="grid gap-y-8">
+    <article className="grid gap-y-8">
       <div className="grid gap-y-4">
         <div className="grid grid-cols-[auto_1fr] items-center gap-4">
           <ProfileIcon />
@@ -19,10 +19,18 @@ const Home = async () => {
         </div>
       </div>
       <section className="grid gap-4">
-        <h2 className="text-lg">Zenn 一覧</h2>
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <h2 className="text-lg">Zenn</h2>
+          <Link
+            href="https://zenn.dev/yend724"
+            className="underline hover:no-underline"
+          >
+            すべてのZennの記事を見る
+          </Link>
+        </div>
         <ZennArticles />
       </section>
-    </div>
+    </article>
   );
 };
 
