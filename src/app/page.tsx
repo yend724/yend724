@@ -4,7 +4,7 @@ import { LinkTag } from '@/components/link-tag';
 import { Link } from '@/components/link';
 import { ZennArticles } from '@/features/zenn-articles/components';
 
-const Home = async () => {
+const Home = () => {
   return (
     <article className="grid gap-y-8">
       <div className="grid gap-y-4">
