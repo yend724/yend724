@@ -20,7 +20,7 @@ const Home = () => {
       </div>
       <section className="grid gap-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <h2 className="text-lg">Zenn</h2>
+          <h2 className="text-lg font-medium">Zenn</h2>
           <Link
             href="https://zenn.dev/yend724"
             className="underline hover:no-underline"
