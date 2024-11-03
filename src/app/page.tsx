@@ -15,6 +15,7 @@ const Home = async () => {
         <div className="flex flex-wrap gap-2">
           <LinkTag label="X(旧Twitter)" href="https://x.com/yend724" />
           <LinkTag label="GitHub" href="https://github.com/yend724" />
+          <LinkTag label="CodePen" href="https://codepen.io/yend24" />
         </div>
       </div>
       <section className="grid gap-4">
