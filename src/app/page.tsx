@@ -7,7 +7,7 @@ import { ZennArticles } from '@/features/zenn-articles/components';
 
 const Home = () => {
   return (
-    <article className="grid gap-y-8">
+    <article className="grid gap-y-12">
       <div className="grid gap-y-4">
         <div className="grid grid-cols-[auto_1fr] items-center gap-4">
           <ProfileIcon />
@@ -32,7 +32,7 @@ const Home = () => {
         <ZennArticles />
       </section>
       <section className="grid gap-4">
-        <div className="flex flex-wrap items-center justify-between gap-2">
+        <div>
           <h2 className="text-xl font-semibold">作ったもの置き場</h2>
         </div>
         <MyWorks />
