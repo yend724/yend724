@@ -2,6 +2,7 @@ import { ProfileIcon } from '@/components/profile-icon';
 import { PageTitle } from '@/components/page-title';
 import { LinkTag } from '@/components/link-tag';
 import { Link } from '@/components/link';
+import { MyWorks } from '@/features/my-works/components';
 import { ZennArticles } from '@/features/zenn-articles/components';
 
 const Home = () => {
@@ -20,7 +21,7 @@ const Home = () => {
       </div>
       <section className="grid gap-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <h2 className="text-lg font-medium">Zenn</h2>
+          <h2 className="text-xl font-semibold">Zenn</h2>
           <Link
             href="https://zenn.dev/yend724"
             className="underline hover:no-underline"
@@ -29,6 +30,12 @@ const Home = () => {
           </Link>
         </div>
         <ZennArticles />
+      </section>
+      <section className="grid gap-4">
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <h2 className="text-xl font-semibold">作ったもの置き場</h2>
+        </div>
+        <MyWorks />
       </section>
     </article>
   );
