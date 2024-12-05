@@ -7,7 +7,7 @@ type Props = {
 export const QiitaArticleCard: React.FC<Props> = ({ article }) => {
   return (
     <article key={article.id} className="grid gap-2">
-      <h2 className="text-lg font-semibold">{article.title}</h2>
+      <h3 className="text-lg font-semibold">{article.title}</h3>
       <div>
         <p>{article.content}</p>
         <Link
