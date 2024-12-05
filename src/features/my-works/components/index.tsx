@@ -7,13 +7,15 @@ export const MyWorks = () => {
       {MY_WORKS.map((work, index) => (
         <div key={index} className="grid gap-y-2">
           <h3 className="text-base font-semibold">{work.title}</h3>
-          <p className="text-sm">{work.description}</p>
-          <Link
-            href={work.url}
-            className="text-sm text-sky-700 underline hover:no-underline dark:text-sky-400"
-          >
-            {work.url}
-          </Link>
+          <div>
+            <p>{work.description}</p>
+            <Link
+              href={work.url}
+              className="text-sm text-sky-700 underline hover:no-underline dark:text-sky-400"
+            >
+              {work.url}
+            </Link>
+          </div>
         </div>
       ))}
     </div>
