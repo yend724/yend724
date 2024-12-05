@@ -4,6 +4,7 @@ import { LinkTag } from '@/components/link-tag';
 import { Link } from '@/components/link';
 import { MyWorks } from '@/features/my-works/components';
 import { ZennArticles } from '@/features/zenn-articles/components';
+import { QiitaArticles } from '@/features/qiita-articles/components';
 
 const Home = () => {
   return (
@@ -30,6 +31,18 @@ const Home = () => {
           </Link>
         </div>
         <ZennArticles />
+      </section>
+      <section className="grid gap-4">
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <h2 className="text-xl font-semibold">Qiita</h2>
+          <Link
+            href="https://qiita.com/yend724"
+            className="underline hover:no-underline"
+          >
+            すべてのQiitaの記事を見る
+          </Link>
+        </div>
+        <QiitaArticles />
       </section>
       <section className="grid gap-4">
         <div>
