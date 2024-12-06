@@ -16,6 +16,8 @@ const Home = () => {
         </div>
         <div className="flex flex-wrap gap-2">
           <LinkTag label="X(旧Twitter)" href="https://x.com/yend724" />
+          <LinkTag label="Zenn" href="https://zenn.dev/yend724" />
+          <LinkTag label="Qiita" href="https://qiita.com/yend724" />
           <LinkTag label="GitHub" href="https://github.com/yend724" />
           <LinkTag label="CodePen" href="https://codepen.io/yend24" />
         </div>
