@@ -17,8 +17,8 @@ export default function RootLayout({
         <link rel="icon" href={FaviconIcon.src} sizes="any" />
         <title>YEND Profile</title>
       </head>
-      <body className="bg-neutral-50 font-serif text-neutral-600 antialiased dark:bg-neutral-900 dark:text-neutral-200">
-        <div className="grid min-h-svh grid-rows-[1fr_auto] gap-y-8 px-4 pb-4 pt-10">
+      <body className="bg-neutral-50 font-mono text-neutral-600 antialiased dark:bg-neutral-900 dark:text-neutral-200">
+        <div className="grid min-h-svh grid-rows-[1fr_auto] gap-20 px-6 pb-6 pt-12">
           <Main>{children}</Main>
           <Footer />
         </div>

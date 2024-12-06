@@ -8,8 +8,8 @@ import { QiitaArticles } from '@/features/qiita-articles/components';
 
 const Home = () => {
   return (
-    <article className="grid gap-y-12">
-      <div className="grid gap-y-4">
+    <div className="grid gap-24">
+      <div className="grid gap-4">
         <div className="grid grid-cols-[auto_1fr] items-center gap-4">
           <ProfileIcon />
           <PageTitle title="YEND" description="プログラムを書く砂滑" />
@@ -20,9 +20,11 @@ const Home = () => {
           <LinkTag label="CodePen" href="https://codepen.io/yend24" />
         </div>
       </div>
-      <section className="grid gap-4">
-        <div className="flex flex-wrap items-center justify-between gap-2">
-          <h2 className="text-xl font-semibold">Zenn</h2>
+      <section className="grid gap-8">
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <h2 className="text-xl font-semibold text-black dark:text-white">
+            Zennで書いた記事
+          </h2>
           <Link
             href="https://zenn.dev/yend724"
             className="underline hover:no-underline"
@@ -32,9 +34,11 @@ const Home = () => {
         </div>
         <ZennArticles />
       </section>
-      <section className="grid gap-4">
-        <div className="flex flex-wrap items-center justify-between gap-2">
-          <h2 className="text-xl font-semibold">Qiita</h2>
+      <section className="grid gap-8">
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <h2 className="text-xl font-semibold text-black dark:text-white">
+            Qiitaで書いた記事
+          </h2>
           <Link
             href="https://qiita.com/yend724"
             className="underline hover:no-underline"
@@ -44,13 +48,15 @@ const Home = () => {
         </div>
         <QiitaArticles />
       </section>
-      <section className="grid gap-4">
+      <section className="grid gap-8">
         <div>
-          <h2 className="text-xl font-semibold">作ったもの置き場</h2>
+          <h2 className="text-xl font-semibold text-black dark:text-white">
+            作ったもの
+          </h2>
         </div>
         <MyWorks />
       </section>
-    </article>
+    </div>
   );
 };
 
