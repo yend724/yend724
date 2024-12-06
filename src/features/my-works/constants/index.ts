@@ -1,4 +1,14 @@
-export const MY_WORKS = [
+type Work = {
+  title: string;
+  description: string;
+  url: string;
+};
+export const MY_WORKS: Work[] = [
+  {
+    title: 'Shake Snap',
+    description: '手ブレ写真が撮れるウェブアプリ',
+    url: 'https://github.com/yend724/shake-snap',
+  },
   {
     title: 'Vite Plugin Ssinc',
     description: 'ViteでSSIライクな `#include` をするためのプラグイン',
