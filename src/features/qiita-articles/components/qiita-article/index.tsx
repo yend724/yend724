@@ -13,16 +13,13 @@ export const QiitaArticle: React.FC<Props> = ({ article }) => {
           {new Date(article.isoDate).toLocaleDateString('ja-JP')}
         </time>
       </div>
-      <h3 className="text-2xl font-semibold">{article.title}</h3>
+      <Link
+        href={article.link}
+        className="text-sky-700 underline hover:no-underline dark:text-sky-400"
+      >
+        <h3 className="text-2xl font-semibold">{article.title}</h3>
+      </Link>
       <p className="line-clamp-3">{article.contentSnippet}</p>
-      <div className="mt-2">
-        <Link
-          href={article.link}
-          className="text-sky-700 underline hover:no-underline dark:text-sky-400"
-        >
-          続きを読む →
-        </Link>
-      </div>
     </article>
   );
 };
