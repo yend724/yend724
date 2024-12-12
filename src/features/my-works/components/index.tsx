@@ -11,7 +11,7 @@ export const MyWorks = () => {
           <div>
             <Link
               href={work.url}
-              className="text-sky-700 underline hover:no-underline dark:text-sky-400"
+              className="text-sky-700 underline break-all hover:no-underline dark:text-sky-400"
             >
               {work.url}
             </Link>
