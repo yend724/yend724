@@ -13,12 +13,14 @@ export const ZennArticle: React.FC<Props> = ({ article }) => {
           {new Date(article.isoDate).toLocaleDateString('ja-JP')}
         </time>
       </div>
-      <Link
-        href={article.link}
-        className="text-sky-700 w-max underline hover:no-underline dark:text-sky-400"
-      >
-        <h3 className="text-2xl font-semibold">{article.title}</h3>
-      </Link>
+      <div>
+        <Link
+          href={article.link}
+          className="text-sky-700 underline hover:no-underline dark:text-sky-400"
+        >
+          <h3 className="text-2xl font-semibold inline">{article.title}</h3>
+        </Link>
+      </div>
       <p className="line-clamp-3">{article.contentSnippet}</p>
     </article>
   );
