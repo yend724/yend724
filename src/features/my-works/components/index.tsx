@@ -8,7 +8,7 @@ export const MyWorks = () => {
         <div key={index} className="grid gap-2">
           <Link
             href={work.url}
-            className="text-sky-700 underline break-all hover:no-underline dark:text-sky-400"
+            className="text-sky-700 w-max underline break-all hover:no-underline dark:text-sky-400"
           >
             <h3 className="text-2xl font-semibold">{work.title}</h3>{' '}
           </Link>

@@ -15,7 +15,7 @@ export const QiitaArticle: React.FC<Props> = ({ article }) => {
       </div>
       <Link
         href={article.link}
-        className="text-sky-700 underline hover:no-underline dark:text-sky-400"
+        className="text-sky-700 w-max underline hover:no-underline dark:text-sky-400"
       >
         <h3 className="text-2xl font-semibold">{article.title}</h3>
       </Link>
