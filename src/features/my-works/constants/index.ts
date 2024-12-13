@@ -16,7 +16,7 @@ export const MY_WORKS: Work[] = [
   },
   {
     title: 'Vite Plugin Ssinc',
-    description: 'ViteでSSIライクな `#include` をするためのプラグイン',
+    description: 'ViteでSSIライクな`#include`をするためのプラグイン',
     url: 'https://www.npmjs.com/package/vite-plugin-ssinc',
   },
 ];
