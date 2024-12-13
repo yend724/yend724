@@ -1,14 +1,25 @@
-export const getColorMode = () => {
-  const colorMode = localStorage.getItem('color-mode');
-  if (colorMode) {
-    return colorMode;
+const isClient = typeof window === 'object';
+const isPrefersColorSchemaDark = () =>
+  window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+export const getColorMode = (): string => {
+  if (!isClient) return 'dark';
+
+  const cacheColorMode = localStorage.getItem('color-mode');
+  if (cacheColorMode) {
+    return cacheColorMode;
   }
-  return window.matchMedia('(prefers-color-scheme: dark)').matches
-    ? 'dark'
-    : 'light';
+
+  return isPrefersColorSchemaDark() ? 'dark' : 'light';
 };
 
-export const switchColorMode = (colorMode: string) => {
+export const getNextColorMode = (): string => {
+  return getColorMode() === 'dark' ? 'light' : 'dark';
+};
+
+export const setColorMode = (colorMode: string): void => {
+  if (!isClient) return;
+
   const html = document.querySelector('html');
   if (html) {
     localStorage.setItem('color-mode', colorMode);

@@ -1,27 +1,13 @@
 'use client';
-import { useEffect, useState } from 'react';
-
 import { DarkMode } from '@/components/icons/dark-mode';
 import { LightMode } from '@/components/icons/light-mode';
-
-import { getColorMode, switchColorMode } from './utils';
+import { useColorMode } from './hooks';
 
 export const ColorModeSwitch = () => {
-  const [colorMode, setColorMode] = useState('dark');
-  useEffect(() => {
-    const colorMode = getColorMode();
-    setColorMode(colorMode);
-    switchColorMode(colorMode);
-  }, []);
+  const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <button
-      onClick={() => {
-        const newColorMode = colorMode === 'light' ? 'dark' : 'light';
-        setColorMode(newColorMode);
-        switchColorMode(newColorMode);
-      }}
-    >
+    <button onClick={toggleColorMode}>
       {colorMode === 'light' ? (
         <LightMode size={32} aria-label="Light Mode" />
       ) : (
