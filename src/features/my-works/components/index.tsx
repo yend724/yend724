@@ -6,16 +6,13 @@ export const MyWorks = () => {
     <div className="grid gap-12">
       {MY_WORKS.map((work, index) => (
         <div key={index} className="grid gap-2">
-          <h3 className="text-2xl font-semibold">{work.title}</h3>
+          <Link
+            href={work.url}
+            className="text-sky-700 underline break-all hover:no-underline dark:text-sky-400"
+          >
+            <h3 className="text-2xl font-semibold">{work.title}</h3>{' '}
+          </Link>
           <p>{work.description}</p>
-          <div>
-            <Link
-              href={work.url}
-              className="text-sky-700 underline break-all hover:no-underline dark:text-sky-400"
-            >
-              {work.url}
-            </Link>
-          </div>
         </div>
       ))}
     </div>
