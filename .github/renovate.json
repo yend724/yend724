@@ -1,7 +1,7 @@
 {
   "extends": ["config:recommended"],
+  "dependencyDashboard": false,
   "labels": ["dependencies"],
-  "packageRules": [{ "matchDepTypes": ["devDependencies"], "automerge": true }],
   "timezone": "Asia/Tokyo",
   "ignoreTests": true,
   "schedule": ["every weekend"]
