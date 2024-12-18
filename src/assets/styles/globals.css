@@ -12,11 +12,11 @@
       inset -0.5em -0.5em 1em var(--article-card-shadow-color-02);
   }
   :where([data-color-mode='light']) .article-card-shadow {
-    --article-card-shadow-color-01: #c3c3c3;
+    --article-card-shadow-color-01: #5c5c5c;
     --article-card-shadow-color-02: #ffffff;
   }
   :where([data-color-mode='dark']) .article-card-shadow {
-    --article-card-shadow-color-01: #202020;
-    --article-card-shadow-color-02: #2c2c2c;
+    --article-card-shadow-color-01: #0f0f0f;
+    --article-card-shadow-color-02: #3d3d3d;
   }
 }
