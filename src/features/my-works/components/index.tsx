@@ -8,7 +8,7 @@ export const MyWorks = () => {
         <article key={index}>
           <Link
             href={work.url}
-            className="grid gap-2 p-4 rounded-lg article-card-shadow"
+            className="grid gap-2 p-4 rounded-lg neumorphism-shadow"
           >
             <h3 className="text-xl font-semibold inline">{work.title}</h3>
             <p>{work.description}</p>

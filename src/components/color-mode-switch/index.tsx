@@ -7,11 +7,14 @@ export const ColorModeSwitch = () => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <button onClick={toggleColorMode}>
+    <button
+      onClick={toggleColorMode}
+      className="neumorphism-shadow p-3 rounded-full"
+    >
       {colorMode === 'light' ? (
-        <LightMode size={32} aria-label="Light Mode" />
+        <LightMode size={28} aria-label="Light Mode" />
       ) : (
-        <DarkMode size={32} aria-label="Dark Mode" />
+        <DarkMode size={28} aria-label="Dark Mode" />
       )}
     </button>
   );

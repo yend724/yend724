@@ -9,7 +9,7 @@ export const ZennArticle: React.FC<Props> = ({ article }) => {
     <article key={article.guid}>
       <Link
         href={article.link}
-        className="grid gap-2 p-4 rounded-lg article-card-shadow"
+        className="grid gap-2 p-4 rounded-lg neumorphism-shadow"
       >
         <div className="flex gap-2 text-sm">
           <span>公開日:</span>
