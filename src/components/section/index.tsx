@@ -16,7 +16,10 @@ export const Section: React.FC<Props> = ({ title, moreLink, children }) => {
           {title}
         </h2>
         {moreLink && (
-          <Link href={moreLink.href} className="underline hover:no-underline">
+          <Link
+            href={moreLink.href}
+            className="text-sky-700 underline hover:no-underline dark:text-sky-400"
+          >
             {moreLink.label}
           </Link>
         )}

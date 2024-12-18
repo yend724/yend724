@@ -24,7 +24,7 @@ const Home = () => {
         </div>
       </div>
       <Section
-        title="Zennで書いた記事"
+        title="Zenn"
         moreLink={{
           href: 'https://zenn.dev/yend724',
           label: 'Zennの記事をもっと見る',
@@ -33,7 +33,7 @@ const Home = () => {
         <ZennArticles />
       </Section>
       <Section
-        title="Qiitaで書いた記事"
+        title="Qiita"
         moreLink={{
           href: 'https://qiita.com/yend724',
           label: 'Qiitaの記事をもっと見る',

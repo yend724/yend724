@@ -6,7 +6,7 @@ export const ZennArticles = async () => {
     limit: 6,
   });
   return (
-    <div className="grid gap-12">
+    <div className="grid gap-6">
       {articles.map(article => (
         <ZennArticle key={article.guid} article={article} />
       ))}

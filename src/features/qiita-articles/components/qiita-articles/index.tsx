@@ -6,7 +6,7 @@ export const QiitaArticles = async () => {
     limit: 6,
   });
   return (
-    <div className="grid gap-12">
+    <div className="grid gap-6">
       {articles.map(article => (
         <QiitaArticle key={article.id} article={article} />
       ))}
