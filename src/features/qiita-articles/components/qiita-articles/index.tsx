@@ -6,9 +6,13 @@ export const QiitaArticles = async () => {
     limit: 6,
   });
   return (
-    <div className="grid gap-6">
+    <div className="grid">
+      <hr className="neumorphism-border h-1 border-none" />
       {articles.map(article => (
-        <QiitaArticle key={article.id} article={article} />
+        <>
+          <QiitaArticle key={article.id} article={article} />
+          <hr className="neumorphism-border h-1 border-none" />
+        </>
       ))}
     </div>
   );

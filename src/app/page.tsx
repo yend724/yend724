@@ -17,7 +17,7 @@ const Home = () => {
     <div className="grid gap-16">
       <div className="grid gap-4">
         <PageTitle title="YEND" description="プログラムを書く砂滑" />
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-4">
           {SOCIAL_LINKS.map(link => (
             <LinkTag key={link.label} label={link.label} href={link.href} />
           ))}
