@@ -14,6 +14,7 @@ const config: Config = {
     lineClampPlugin,
     plugin(({ addVariant }) => {
       addVariant('hover', '@media(any-hover:hover){ &:hover }');
+      addVariant('group-hover', '@media(any-hover:hover){ .group:hover & }');
     }),
   ],
 };
