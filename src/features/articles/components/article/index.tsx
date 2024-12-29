@@ -3,6 +3,7 @@ import { Article as ArticleInterface } from '../../types';
 import { Link } from '@/components/link';
 import QiitaIcon from '@/assets/images/qiita-icon.png';
 import ZennIcon from '@/assets/images/zenn-icon.svg';
+import ProfileIcon from '@/assets/images/profile-icon.png';
 
 const PlatformBadgeMap = {
   zenn: {
@@ -12,6 +13,10 @@ const PlatformBadgeMap = {
   qiita: {
     label: 'Qiita',
     icon: QiitaIcon,
+  },
+  self: {
+    label: 'YEND',
+    icon: ProfileIcon,
   },
 };
 

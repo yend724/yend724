@@ -1,3 +1,4 @@
+import fs from 'node:fs';
 import Parser from 'rss-parser';
 import type {
   ZennRSSFeedItem,
@@ -42,6 +43,27 @@ export const getQiitaArticles = async () => {
     return item as QiitaRSSFeedItem;
   });
   return { articles };
+};
+
+export const getMyArticles = async () => {
+  const curretAbsolutePath = process.cwd();
+  const targetPath = `${curretAbsolutePath}/src/contents/posts`;
+  const files = fs.readdirSync(targetPath);
+
+  const articles = await Promise.all(
+    files.map(async file => {
+      const content = await import(`@/contents/posts/${file}`);
+      return {
+        id: file,
+        title: content.meta.title,
+        isoDate: new Date(content.meta.date).toISOString(),
+        link: `/posts/${file.replace(/\.mdx$/, '')}`,
+        source: 'self' as const,
+      };
+    })
+  );
+
+  return articles;
 };
 
 export const sortArticlesByIsoDate = (articles: Article[]) => {
