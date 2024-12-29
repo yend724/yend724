@@ -27,3 +27,16 @@ export default async function Page({
 export function generateStaticParams() {
   return [{ slug: '2022-06-23-sieve-of-eratosthenes' }];
 }
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const { meta } = await import(`@/contents/posts/${slug}.mdx`);
+
+  return {
+    title: `${meta.title} | YEND Profile`,
+  };
+}
