@@ -18,7 +18,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href={FaviconIcon.src} sizes="any" />
       </head>
-      <body className="bg-neutral-200 font-mono text-neutral-700 antialiased dark:bg-neutral-800 dark:text-neutral-100">
+      <body className="bg-neutral-200 font-sans text-neutral-700 antialiased dark:bg-neutral-800 dark:text-neutral-100">
         <div className="grid min-h-svh grid-rows-[1fr_auto] gap-20 px-4 pb-6 pt-12">
           <header className="mx-auto block w-full max-w-5xl">
             <div className="grid gap-4">
