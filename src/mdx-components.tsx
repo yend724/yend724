@@ -1,4 +1,5 @@
 import type { MDXComponents } from 'mdx/types';
+import { Link } from '@/components/link';
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -18,13 +19,19 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     li: props => <li className="text-base my-2" {...props} />,
     pre: props => (
       <pre
-        className="text-base bg-slate-900 p-4 rounded overflow-auto"
+        className="text-base bg-neutral-900 p-4 rounded overflow-auto"
         {...props}
       />
     ),
     code: props => (
       <code
-        className="text-base bg-slate-900 px-1 break-all rounded-sm"
+        className="text-base bg-neutral-200 text-neutral-700 px-1 break-all rounded-sm"
+        {...props}
+      />
+    ),
+    a: props => (
+      <Link
+        className="text-sky-700 dark:text-sky-400 underline hover:no-underline"
         {...props}
       />
     ),

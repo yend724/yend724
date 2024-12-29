@@ -13,7 +13,9 @@ export default async function Page({
       <div>
         <div className="flex gap-x-2 items-center text-sm">
           <span>公開日</span>
-          <span>{meta.date}</span>
+          <time dateTime={new Date(meta.date).toLocaleDateString('ja-JP')}>
+            {new Date(meta.date).toLocaleDateString('ja-JP')}
+          </time>
         </div>
         <h1 className="text-3xl font-bold mt-4 mb-12">{meta.title}</h1>
       </div>
