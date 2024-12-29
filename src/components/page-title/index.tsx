@@ -9,8 +9,10 @@ export const PageTitle: React.FC<Props> = ({ title, description }) => {
   return (
     <div className="grid gap-4">
       <div className="flex items-center gap-4">
-        <ProfileIcon />
-        <h1 className="text-wrap text-left text-4xl font-semibold text-black dark:text-white">
+        <div className="size-12">
+          <ProfileIcon />
+        </div>
+        <h1 className="text-wrap text-left text-3xl font-semibold text-black dark:text-white">
           {title}
         </h1>
         <div className="ml-auto">

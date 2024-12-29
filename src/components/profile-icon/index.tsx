@@ -3,7 +3,7 @@ import ProfileIconImage from '@/assets/images/profile-icon.png';
 
 export const ProfileIcon = () => {
   return (
-    <div className="size-12 overflow-hidden rounded-full bg-gradient-to-br from-sky-400 to-sky-500 p-0.5 dark:from-sky-600 dark:to-sky-700">
+    <div className="size-full aspect-square overflow-hidden rounded-full bg-gradient-to-br from-sky-400 to-sky-500 p-0.5 dark:from-sky-600 dark:to-sky-700">
       <div className="overflow-hidden rounded-full">
         <Image
           src={ProfileIconImage}
@@ -11,6 +11,7 @@ export const ProfileIcon = () => {
           height={512}
           alt="YENDのプロフィールアイコン。スナメリのイラスト。"
           loading="eager"
+          className="size-full"
         />
       </div>
     </div>

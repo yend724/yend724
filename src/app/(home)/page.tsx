@@ -1,11 +1,8 @@
 import type { Metadata } from 'next';
-import { PageTitle } from '@/components/page-title';
-import { LinkTag } from '@/components/link-tag';
 import { Section } from '@/components/section';
 import { MyWorks } from '@/features/my-works/components';
 import { ZennArticles } from '@/features/zenn-articles/components';
 import { QiitaArticles } from '@/features/qiita-articles/components';
-import { SOCIAL_LINKS } from '@/constants';
 
 export const metadata: Metadata = {
   title: 'YEND Profile',
@@ -15,14 +12,6 @@ export const metadata: Metadata = {
 const Home = () => {
   return (
     <div className="grid gap-16">
-      <div className="grid gap-4">
-        <PageTitle title="YEND" description="プログラムを書く砂滑" />
-        <div className="flex flex-wrap gap-4">
-          {SOCIAL_LINKS.map(link => (
-            <LinkTag key={link.label} label={link.label} href={link.href} />
-          ))}
-        </div>
-      </div>
       <Section
         title="Zenn"
         moreLink={{
