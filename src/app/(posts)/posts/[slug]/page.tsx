@@ -1,3 +1,5 @@
+import { SITE_META } from '@/constants';
+
 export default async function Page({
   params,
 }: {
@@ -36,7 +38,18 @@ export async function generateMetadata({
   const { slug } = await params;
   const { meta } = await import(`@/contents/posts/${slug}.mdx`);
 
+  const publishedTime = new Date(meta.date).toISOString();
+
   return {
-    title: `${meta.title} | YEND Profile`,
+    title: `${meta.title} | ${SITE_META.title}`,
+    openGraph: {
+      title: `${meta.title} | ${SITE_META.title}`,
+      url: `${SITE_META.openGraph.url}/posts/${slug}/`,
+      siteName: SITE_META.openGraph.siteName,
+      locale: SITE_META.openGraph.locale,
+      type: 'article',
+      publishedTime,
+      authors: ['yend724'],
+    },
   };
 }

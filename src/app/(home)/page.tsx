@@ -2,10 +2,15 @@ import type { Metadata } from 'next';
 import { Section } from '@/components/section';
 import { MyWorks } from '@/features/my-works/components';
 import { Articles } from '@/features/articles/components';
+import { SITE_META } from '@/constants';
 
 export const metadata: Metadata = {
-  title: 'YEND Profile',
-  description: 'YEND の Profile',
+  title: SITE_META.title,
+  description: SITE_META.description,
+  openGraph: {
+    ...SITE_META.openGraph,
+    type: 'website',
+  },
 };
 
 const Home = () => {
