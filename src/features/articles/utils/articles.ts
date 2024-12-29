@@ -46,8 +46,8 @@ export const getQiitaArticles = async () => {
 };
 
 export const getMyArticles = async () => {
-  const curretAbsolutePath = process.cwd();
-  const targetPath = `${curretAbsolutePath}/src/contents/posts`;
+  const currentAbsolutePath = process.cwd();
+  const targetPath = `${currentAbsolutePath}/src/contents/posts`;
   const files = fs.readdirSync(targetPath);
 
   const articles = await Promise.all(

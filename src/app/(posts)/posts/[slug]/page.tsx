@@ -1,40 +1,45 @@
+import fs from 'node:fs';
 import { SITE_META } from '@/constants';
 
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const slug = (await params).slug;
   const { default: Content, meta } = await import(
     `@/contents/posts/${slug}.mdx`
   );
 
   return (
-    <div className="w-full">
-      <div>
-        <div className="flex gap-x-2 items-center text-sm">
-          <span>公開日</span>
-          <time dateTime={new Date(meta.date).toLocaleDateString('ja-JP')}>
-            {new Date(meta.date).toLocaleDateString('ja-JP')}
-          </time>
-        </div>
-        <h1 className="text-3xl font-bold mt-4 mb-12">{meta.title}</h1>
+    <div className="space-y-12 w-full overflow-hidden">
+      <div className="grid gap-y-2">
+        <time
+          dateTime={new Date(meta.date).toLocaleDateString('ja-JP')}
+          className="text-sm opacity-80"
+        >
+          {new Date(meta.date).toLocaleDateString('ja-JP')}
+        </time>
+        <h1 className="text-3xl font-bold">{meta.title}</h1>
       </div>
-      <Content />
+      <div>
+        <Content />
+      </div>
     </div>
   );
-}
+};
 
-export function generateStaticParams() {
-  return [{ slug: '2022-06-23-sieve-of-eratosthenes' }];
-}
+export const generateStaticParams = () => {
+  const currentAbsolutePath = process.cwd();
+  const targetPath = `${currentAbsolutePath}/src/contents/posts`;
+  const files = fs.readdirSync(targetPath);
+  const slugs = files.map(file => {
+    return { slug: file.replace(/\.mdx$/, '') };
+  });
+  return slugs;
+};
 
-export async function generateMetadata({
+export const generateMetadata = async ({
   params,
 }: {
   params: Promise<{ slug: string }>;
-}) {
+}) => {
   const { slug } = await params;
   const { meta } = await import(`@/contents/posts/${slug}.mdx`);
 
@@ -52,4 +57,6 @@ export async function generateMetadata({
       authors: ['yend724'],
     },
   };
-}
+};
+
+export default Page;

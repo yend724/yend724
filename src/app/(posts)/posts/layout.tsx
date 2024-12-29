@@ -5,11 +5,11 @@ import { Footer } from '@/components/footer';
 import { ProfileIcon } from '@/components/profile-icon';
 import { Link } from '@/components/link';
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) => {
   return (
     <html lang="ja" data-color-mode="dark">
       <head>
@@ -18,12 +18,12 @@ export default function RootLayout({
         <link rel="icon" href={FaviconIcon.src} sizes="any" />
       </head>
       <body className="bg-neutral-200 font-mono text-neutral-700 antialiased dark:bg-neutral-800 dark:text-neutral-100">
-        <div className="grid min-h-svh grid-rows-[auto_1fr_auto] gap-8 px-4 pb-6 pt-12">
-          <header className="mx-auto block w-full max-w-5xl">
+        <div className="grid min-h-svh grid-rows-[auto_1fr_auto] gap-12 px-4 py-6">
+          <header className="mx-auto flex w-full max-w-5xl">
             <Link href="/" className="flex items-center gap-2">
-              <div className="size-8">
+              <span className="size-8">
                 <ProfileIcon />
-              </div>
+              </span>
               <span className="font-lg font-bold">YEND</span>
             </Link>
           </header>
@@ -33,4 +33,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

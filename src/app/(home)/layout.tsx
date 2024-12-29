@@ -6,11 +6,11 @@ import { PageTitle } from '@/components/page-title';
 import { LinkTag } from '@/components/link-tag';
 import { SOCIAL_LINKS } from '@/constants';
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) => {
   return (
     <html lang="ja" data-color-mode="dark">
       <head>
@@ -40,4 +40,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;
