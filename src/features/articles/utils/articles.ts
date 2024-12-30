@@ -28,12 +28,26 @@ export const normalizeQiitaArticle = (article: QiitaRSSFeedItem) => {
   };
 };
 
+export const normalizeMyPosts = (file: {
+  title: string;
+  date: string;
+  slug: string;
+}) => {
+  return {
+    id: file.slug,
+    title: file.title,
+    link: `/posts/${file.slug}`,
+    isoDate: new Date(file.date).toISOString(),
+    source: 'self' as const,
+  };
+};
+
 export const getZennArticles = async () => {
   const feed = await parser.parseURL('https://zenn.dev/yend724/feed?all=1');
   const articles = feed.items.map(item => {
     return item as ZennRSSFeedItem;
   });
-  return { articles };
+  return articles;
 };
 export const getQiitaArticles = async () => {
   const feed = (await parser.parseURL(
@@ -42,28 +56,31 @@ export const getQiitaArticles = async () => {
   const articles = feed.items.map(item => {
     return item as QiitaRSSFeedItem;
   });
-  return { articles };
+  return articles;
 };
 
-export const getMyArticles = async () => {
+export const getMyPosts = () => {
   const currentAbsolutePath = process.cwd();
   const targetPath = `${currentAbsolutePath}/src/contents/posts`;
-  const files = fs.readdirSync(targetPath);
+  const fileNames = fs.readdirSync(targetPath);
 
-  const articles = await Promise.all(
-    files.map(async file => {
-      const content = await import(`@/contents/posts/${file}`);
+  const mdxFiles = Promise.all(
+    fileNames.map(async fileName => {
+      const file = (await import(`@/contents/posts/${fileName}`)) as {
+        meta: {
+          title: string;
+          date: string;
+        };
+      };
       return {
-        id: file,
-        title: content.meta.title,
-        isoDate: new Date(content.meta.date).toISOString(),
-        link: `/posts/${file.replace(/\.mdx$/, '')}`,
-        source: 'self' as const,
+        title: file.meta.title,
+        date: file.meta.date,
+        slug: `${fileName.replace('.mdx', '')}`,
       };
     })
   );
 
-  return articles;
+  return mdxFiles;
 };
 
 export const sortArticlesByIsoDate = (articles: Article[]) => {

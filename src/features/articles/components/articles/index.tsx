@@ -1,22 +1,23 @@
 import {
   getZennArticles,
   getQiitaArticles,
-  getMyArticles,
+  getMyPosts,
   normalizeZennArticle,
   normalizeQiitaArticle,
+  normalizeMyPosts,
   sortArticlesByIsoDate,
 } from '../../utils/articles';
 import { Article } from '../article';
 
 export const Articles = async () => {
-  const { articles: zennArticles } = await getZennArticles();
-  const { articles: qiitaArticles } = await getQiitaArticles();
-  const myArticles = await getMyArticles();
+  const zennArticles = await getZennArticles();
+  const qiitaArticles = await getQiitaArticles();
+  const posts = await getMyPosts();
 
   const articles = [
     ...zennArticles.map(normalizeZennArticle),
     ...qiitaArticles.map(normalizeQiitaArticle),
-    ...myArticles,
+    ...posts.map(normalizeMyPosts),
   ];
 
   const sortedArticles = sortArticlesByIsoDate(articles);
