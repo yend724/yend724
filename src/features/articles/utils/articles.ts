@@ -38,7 +38,7 @@ export const normalizeMyPosts = (file: {
     title: file.title,
     link: `/posts/${file.slug}`,
     isoDate: new Date(file.date).toISOString(),
-    source: 'self' as const,
+    source: 'yend' as const,
   };
 };
 

@@ -35,5 +35,5 @@ export type Article = {
   title: string;
   link: string;
   isoDate: string;
-  source: 'zenn' | 'qiita' | 'self';
+  source: 'zenn' | 'qiita' | 'yend';
 };

@@ -11,8 +11,20 @@ export const PLATFORM_ICON_MAP = {
     label: 'Qiita',
     icon: QiitaIcon,
   },
-  self: {
+  yend: {
     label: 'YEND',
     icon: ProfileIcon,
   },
 };
+
+export const FILTER = {
+  zenn: true,
+  qiita: true,
+  yend: true,
+} as const;
+export const FILTER_MAP = {
+  zenn: 'Zenn',
+  qiita: 'Qiita',
+  yend: 'YEND',
+} as const;
+export const FILTER_KEYS = Object.keys(FILTER) as (keyof typeof FILTER)[];
