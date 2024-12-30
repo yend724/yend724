@@ -1,5 +1,6 @@
 import type { MDXComponents } from 'mdx/types';
 import { Link } from '@/components/link';
+import { CodeBlock } from '@/components/code-block';
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -66,12 +67,15 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       <ol className="list-decimal list-inside my-6 pl-8 -indent-8" {...props} />
     ),
     li: props => <li className="text-base my-2" {...props} />,
-    pre: props => (
-      <pre
-        className="text-base bg-neutral-900 p-4 my-6 rounded overflow-auto"
-        {...props}
-      />
-    ),
+    pre: ({ children }) => {
+      const [language, _] = children.props.className?.split(':') ?? [''];
+      const formattedLanguage = language.replace('language-', '');
+      return (
+        <CodeBlock lang={formattedLanguage}>
+          {children.props.children}
+        </CodeBlock>
+      );
+    },
     code: props => (
       <code
         className="text-base bg-neutral-200 text-neutral-700 px-1 break-all rounded-sm mx-1"

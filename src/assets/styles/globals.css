@@ -14,6 +14,12 @@
   --neumorphism-shadow-color-01: #1b1b1b;
   --neumorphism-shadow-color-02: #313131;
 }
+
+@layer base {
+  pre {
+    @apply px-6 py-4  rounded overflow-auto my-4;
+  }
+}
 @layer component {
   .neumorphism-shadow {
     box-shadow: 5px 5px 10px var(--neumorphism-shadow-color-01),
