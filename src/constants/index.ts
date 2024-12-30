@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 
 export const SITE_META = {
-  title: 'YEND Profile',
-  description: 'YEND の Profile',
+  title: 'YEND',
+  description: 'YENDのPortfolio',
   openGraph: {
-    title: 'YEND Profile',
-    description: 'YEND の Profile',
+    title: 'YEND',
+    description: 'YENDのPortfolio',
     url: 'https://yend.dev',
-    siteName: 'YEND Profile',
+    siteName: 'YEND',
     locale: 'ja_JP',
   },
 };
