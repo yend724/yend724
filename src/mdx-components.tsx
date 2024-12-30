@@ -17,10 +17,10 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h2: ({ children }) => (
       <h2
         id={children.toString()}
-        className="flex text-2xl font-bold mb-8 mt-12 gap-x-2"
+        className="text-2xl font-bold mb-8 mt-12"
       >
-        <span className="text-neutral-400">##</span>
-        <span>{children}</span>
+        <Link className="flex gap-x-2" href={`#${children.toString()}}`><span className="text-neutral-400">##</span>
+        <span>{children}</span></Link>
       </h2>
     ),
     h3: ({ children }) => (
