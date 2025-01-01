@@ -14,7 +14,11 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           dateTime={new Date(meta.date).toLocaleDateString('ja-JP')}
           className="text-sm opacity-80"
         >
-          {new Date(meta.date).toLocaleDateString('ja-JP')}
+          {new Date(meta.date).toLocaleDateString('ja-JP', {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+          })}
         </time>
         <h1 className="text-3xl font-bold">{meta.title}</h1>
       </div>
