@@ -11,7 +11,7 @@ export const Article: React.FC<Props> = ({ article }) => {
     <article key={article.id}>
       <Link href={article.link} className="group grid w-fit gap-2">
         <time
-          className="flex items-center gap-1 text-sm"
+          className="flex items-center gap-1 text-sm opacity-80"
           dateTime={article.isoDate}
         >
           <span>

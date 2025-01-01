@@ -6,10 +6,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     ...components,
     h1: ({ children }) => (
-      <h1
-        id={children.toString()}
-        className="mb-8 mt-12 flex gap-x-2 text-3xl font-bold"
-      >
+      <h1 id={children.toString()} className="mb-8 mt-12 text-3xl font-bold">
         <Link className="flex gap-x-2" href={`#${children.toString()}`}>
           <span className="text-neutral-400">#</span>
           <span>{children}</span>
@@ -17,10 +14,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </h1>
     ),
     h2: ({ children }) => (
-      <h2
-        id={children.toString()}
-        className="flex text-2xl font-bold mb-8 mt-12 gap-x-2"
-      >
+      <h2 id={children.toString()} className="mb-8 mt-12 text-2xl font-bold">
         <Link className="flex gap-x-2" href={`#${children.toString()}`}>
           <span className="text-neutral-400">##</span>
           <span>{children}</span>
@@ -28,10 +22,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </h2>
     ),
     h3: ({ children }) => (
-      <h3
-        id={children.toString()}
-        className="mb-8 mt-12 flex gap-x-2 text-xl font-bold"
-      >
+      <h3 id={children.toString()} className="mb-8 mt-12 text-xl font-bold">
         <Link className="flex gap-x-2" href={`#${children.toString()}`}>
           <span className="text-neutral-400">###</span>
           <span>{children}</span>
@@ -39,10 +30,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </h3>
     ),
     h4: ({ children }) => (
-      <h4
-        id={children.toString()}
-        className="mb-8 mt-12 flex gap-x-2 text-lg font-bold"
-      >
+      <h4 id={children.toString()} className="mb-8 mt-12 text-lg font-bold">
         <Link className="flex gap-x-2" href={`#${children.toString()}`}>
           <span className="text-neutral-400">####</span>
           <span>{children}</span>
@@ -50,10 +38,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </h4>
     ),
     h5: ({ children }) => (
-      <h5
-        id={children.toString()}
-        className="mb-8 mt-12 flex gap-x-2 text-base font-bold"
-      >
+      <h5 id={children.toString()} className="mb-8 mt-12 text-base font-bold">
         <Link className="flex gap-x-2" href={`#${children.toString()}`}>
           <span className="text-neutral-400">#####</span>
           <span>{children}</span>
@@ -61,10 +46,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </h5>
     ),
     h6: ({ children }) => (
-      <h6
-        id={children.toString()}
-        className="mb-8 mt-12 flex gap-x-2 text-base font-bold"
-      >
+      <h6 id={children.toString()} className="mb-8 mt-12 text-base font-bold">
         <Link className="flex gap-x-2" href={`#${children.toString()}`}>
           <span className="text-neutral-400">######</span>
           <span>{children}</span>
