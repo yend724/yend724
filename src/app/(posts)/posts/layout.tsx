@@ -24,7 +24,7 @@ const RootLayout = ({
               <span className="size-8">
                 <ProfileIcon />
               </span>
-              <span className="font-lg font-bold">YEND</span>
+              <span className="font-bold">YEND</span>
             </Link>
           </header>
           <Main>{children}</Main>

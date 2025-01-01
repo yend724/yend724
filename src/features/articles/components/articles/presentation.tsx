@@ -13,11 +13,11 @@ export const ArticlesPresentation: React.FC<Props> = ({ articles }) => {
 
   return (
     <div className="space-y-8">
-      <div className="flex flex-wrap gap-4">
+      <fieldset className="flex flex-wrap gap-4">
         {FILTER_KEYS.map(filter => (
           <label
             key={filter}
-            className="flex items-center gap-x-2 cursor-pointer"
+            className="flex cursor-pointer items-center gap-x-2"
           >
             <input
               type="checkbox"
@@ -32,7 +32,7 @@ export const ArticlesPresentation: React.FC<Props> = ({ articles }) => {
             <span>{FILTER_MAP[filter]}</span>
           </label>
         ))}
-      </div>
+      </fieldset>
       <div className="grid gap-y-8">
         {filteredArticles.map(article => (
           <Article key={article.id} article={article} />

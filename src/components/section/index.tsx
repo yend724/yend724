@@ -1,5 +1,3 @@
-import { Link } from '@/components/link';
-
 type Props = {
   title: string;
   moreLink?: {

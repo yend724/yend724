@@ -8,7 +8,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   );
 
   return (
-    <div className="space-y-12 w-full overflow-hidden">
+    <div className="w-full space-y-12 overflow-hidden">
       <div className="grid gap-y-2">
         <time
           dateTime={new Date(meta.date).toLocaleDateString('ja-JP')}

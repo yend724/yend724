@@ -4,7 +4,7 @@ import { Main } from '@/components/main';
 import { Footer } from '@/components/footer';
 import { PageTitle } from '@/components/page-title';
 import { LinkTag } from '@/components/link-tag';
-import { SOCIAL_LINKS } from '@/constants';
+import { SOCIAL_LINKS, SITE_META } from '@/constants';
 
 const RootLayout = ({
   children,
@@ -19,10 +19,13 @@ const RootLayout = ({
         <link rel="icon" href={FaviconIcon.src} sizes="any" />
       </head>
       <body className="bg-neutral-200 font-sans text-neutral-700 antialiased dark:bg-neutral-800 dark:text-neutral-100">
-        <div className="grid min-h-svh grid-rows-[auto_1fr] gap-20 px-4 pb-6 pt-12">
+        <div className="grid min-h-svh grid-rows-[auto_1fr] gap-16 px-4 pb-6 pt-12">
           <header className="mx-auto block w-full max-w-5xl">
             <div className="grid gap-4">
-              <PageTitle title="YEND" description="プログラムを書く砂滑" />
+              <PageTitle
+                title={SITE_META.title}
+                description="プログラムを書く砂滑"
+              />
               <div className="flex flex-wrap gap-4">
                 {SOCIAL_LINKS.map(link => (
                   <LinkTag

@@ -9,7 +9,7 @@ export const ColorModeSwitch = () => {
   return (
     <button
       onClick={toggleColorMode}
-      className="neumorphism-shadow p-3 rounded-full"
+      className="neumorphism-shadow rounded-full p-3"
     >
       {colorMode === 'light' ? (
         <LightMode size={28} aria-label="Light Mode" />

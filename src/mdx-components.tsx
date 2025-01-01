@@ -8,7 +8,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h1: ({ children }) => (
       <h1
         id={children.toString()}
-        className="flex text-3xl font-bold mb-8 mt-12 gap-x-2"
+        className="mb-8 mt-12 flex gap-x-2 text-3xl font-bold"
       >
         <span className="text-neutral-400">#</span>
         <span>{children}</span>
@@ -17,7 +17,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h2: ({ children }) => (
       <h2
         id={children.toString()}
-        className="flex text-2xl font-bold mb-8 mt-12 gap-x-2"
+        className="mb-8 mt-12 flex gap-x-2 text-2xl font-bold"
       >
         <span className="text-neutral-400">##</span>
         <span>{children}</span>
@@ -26,7 +26,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h3: ({ children }) => (
       <h3
         id={children.toString()}
-        className="flex text-xl font-bold mb-8 mt-12 gap-x-2"
+        className="mb-8 mt-12 flex gap-x-2 text-xl font-bold"
       >
         <span className="text-neutral-400">##</span>
         <span>{children}</span>
@@ -35,7 +35,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h4: ({ children }) => (
       <h4
         id={children.toString()}
-        className="flex text-lg font-bold mb-8 mt-12 gap-x-2"
+        className="mb-8 mt-12 flex gap-x-2 text-lg font-bold"
       >
         <span className="text-neutral-400">###</span>
         <span>{children}</span>
@@ -44,7 +44,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h5: ({ children }) => (
       <h5
         id={children.toString()}
-        className="flex text-base font-bold mb-8 mt-12 gap-x-2"
+        className="mb-8 mt-12 flex gap-x-2 text-base font-bold"
       >
         <span className="text-neutral-400">#####</span>
         <span>{children}</span>
@@ -53,22 +53,22 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h6: ({ children }) => (
       <h6
         id={children.toString()}
-        className="flex text-base font-bold mb-8 mt-12 gap-x-2"
+        className="mb-8 mt-12 flex gap-x-2 text-base font-bold"
       >
         <span className="text-neutral-400">######</span>
         <span>{children}</span>
       </h6>
     ),
-    p: props => <p className="text-base my-6 break-all" {...props} />,
+    p: props => <p className="my-6 break-all text-base" {...props} />,
     ul: props => (
-      <ul className="list-disc list-inside my-6 pl-8 -indent-8" {...props} />
+      <ul className="my-6 list-inside list-disc pl-8 -indent-8" {...props} />
     ),
     ol: props => (
-      <ol className="list-decimal list-inside my-6 pl-8 -indent-8" {...props} />
+      <ol className="my-6 list-inside list-decimal pl-8 -indent-8" {...props} />
     ),
-    li: props => <li className="text-base my-2" {...props} />,
+    li: props => <li className="my-2 text-base" {...props} />,
     pre: ({ children }) => {
-      const [language, _] = children.props.className?.split(':') ?? [''];
+      const [language] = children.props.className?.split(':') ?? [''];
       const formattedLanguage = language.replace('language-', '');
       return (
         <CodeBlock lang={formattedLanguage}>
@@ -78,13 +78,13 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     },
     code: props => (
       <code
-        className="text-base bg-neutral-200 text-neutral-700 px-1 break-all rounded-sm mx-1"
+        className="mx-1 break-all rounded-sm bg-neutral-200 px-1 text-base text-neutral-700"
         {...props}
       />
     ),
     a: props => (
       <Link
-        className="text-sky-700 dark:text-sky-400 underline hover:no-underline"
+        className="text-sky-700 underline hover:no-underline dark:text-sky-400"
         {...props}
       />
     ),

@@ -13,7 +13,7 @@ export const CodeBlock: React.FC<Props> = async props => {
 
   return (
     <div className="relative text-sm">
-      <span className="absolute text-xs right-1 top-1 opacity-50">
+      <span className="absolute right-1 top-1 text-xs opacity-50">
         {props.lang}
       </span>
       <div dangerouslySetInnerHTML={{ __html: code }} />

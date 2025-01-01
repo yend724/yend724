@@ -1,5 +1,3 @@
-import type { Metadata } from 'next';
-
 export const SITE_META = {
   title: 'YEND',
   description: 'YENDのPortfolio',

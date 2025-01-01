@@ -9,9 +9,9 @@ type Props = {
 export const Article: React.FC<Props> = ({ article }) => {
   return (
     <article key={article.id}>
-      <Link href={article.link} className="group grid gap-2 w-max">
+      <Link href={article.link} className="group grid w-max gap-2">
         <time
-          className="flex gap-1 items-center text-sm"
+          className="flex items-center gap-1 text-sm"
           dateTime={article.isoDate}
         >
           <span>{new Date(article.isoDate).toLocaleDateString('ja-JP')}</span>
@@ -20,7 +20,7 @@ export const Article: React.FC<Props> = ({ article }) => {
         <h3 className="text-lg font-semibold group-hover:underline">
           {article.title}
         </h3>
-        <span className="flex gap-x-2 items-center">
+        <span className="flex items-center gap-x-2">
           <Image
             src={PLATFORM_ICON_MAP[article.source].icon}
             alt={article.source}
