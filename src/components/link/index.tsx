@@ -1,5 +1,5 @@
 import NextLink from 'next/link';
-import { isAbsolutePath } from '@/utils/isAbsolutePath';
+import { isAbsolutePath } from '@/utils/path';
 
 type NextLinkProps = Parameters<typeof NextLink>;
 type Props = NextLinkProps[0] & { children: React.ReactNode };
