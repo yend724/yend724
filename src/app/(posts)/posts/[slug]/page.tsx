@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import type { Meta } from '@/contents/types/post';
 import { SITE_META } from '@/constants';
 
 const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
@@ -32,13 +33,26 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   );
 };
 
-export const generateStaticParams = () => {
+export const generateStaticParams = async () => {
   const currentAbsolutePath = process.cwd();
   const targetPath = `${currentAbsolutePath}/src/contents/posts`;
   const files = fs.readdirSync(targetPath);
-  const slugs = files.map(file => {
-    return { slug: file.replace(/\.mdx$/, '') };
-  });
+  const posts = await Promise.all(
+    files.map(async file => {
+      const { meta } = (await import(`@/contents/posts/${file}`)) as {
+        meta: Meta;
+      };
+      return {
+        ...meta,
+        slug: file.replace(/\.mdx$/, ''),
+      };
+    })
+  );
+  const slugs = posts
+    .filter(post => !post.draft)
+    .map(post => ({
+      slug: post.slug.replace(/\.mdx$/, ''),
+    }));
   return slugs;
 };
 
@@ -48,7 +62,9 @@ export const generateMetadata = async ({
   params: Promise<{ slug: string }>;
 }) => {
   const { slug } = await params;
-  const { meta } = await import(`@/contents/posts/${slug}.mdx`);
+  const { meta } = (await import(`@/contents/posts/${slug}.mdx`)) as {
+    meta: Meta;
+  };
 
   const publishedTime = new Date(meta.date).toISOString();
 

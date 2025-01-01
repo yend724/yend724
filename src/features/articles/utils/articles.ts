@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import Parser from 'rss-parser';
+import type { Meta } from '@/contents/types/post';
 import type {
   ZennRSSFeedItem,
   QiitaRSSFeedItem,
@@ -67,15 +68,13 @@ export const getMyPosts = () => {
   const mdxFiles = Promise.all(
     fileNames.map(async fileName => {
       const file = (await import(`@/contents/posts/${fileName}`)) as {
-        meta: {
-          title: string;
-          date: string;
-        };
+        meta: Meta;
       };
       return {
         title: file.meta.title,
         date: file.meta.date,
         slug: `${fileName.replace('.mdx', '')}`,
+        draft: file.meta.draft,
       };
     })
   );

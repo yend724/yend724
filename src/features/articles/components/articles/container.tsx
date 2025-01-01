@@ -18,7 +18,7 @@ export const ArticlesContainer = async () => {
   const articles = [
     ...zennArticles.map(normalizeZennArticle),
     ...qiitaArticles.map(normalizeQiitaArticle),
-    ...posts.map(normalizeMyPosts),
+    ...posts.filter(article => !article.draft).map(normalizeMyPosts),
   ];
 
   const sortedArticles = sortArticlesByIsoDate(articles);

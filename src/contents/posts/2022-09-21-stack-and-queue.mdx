@@ -1,7 +1,10 @@
-export const meta = {
-    title: 'スタックとキュー',
-    date: '2022-09-21',
-}
+import { generatePostMeta } from '../utils/post'
+
+export const meta = generatePostMeta({
+  title: 'スタックとキュー',
+  date: '2022-09-21',
+  draft: false,
+})
 
 基本的なデータ構造であるスタックとキューについて学ぶ。
 

@@ -1,7 +1,10 @@
-export const meta = {
+import { generatePostMeta } from '../utils/post'
+
+export const meta = generatePostMeta({
   title: 'エラトステネスの篩(ふるい)で素数を求める',
   date: '2022-06-23',
-}
+  draft: false,
+})
 
 素数を求めるアルゴリズムに **エラトステネスの篩(ふるい)** というものがあることを知った。エラトステネスの篩(ふるい)を使うと`2からNまで`の素数を求めることができる。
 
