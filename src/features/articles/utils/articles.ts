@@ -1,6 +1,6 @@
-import fs from 'node:fs';
 import Parser from 'rss-parser';
-import type { Meta } from '@/contents/types/post';
+import { getPosts } from '@/utils/posts';
+
 import type {
   ZennRSSFeedItem,
   QiitaRSSFeedItem,
@@ -29,16 +29,16 @@ export const normalizeQiitaArticle = (article: QiitaRSSFeedItem) => {
   };
 };
 
-export const normalizeMyPosts = (file: {
+export const normalizeMyArticles = (article: {
   title: string;
   date: string;
   slug: string;
 }) => {
   return {
-    id: file.slug,
-    title: file.title,
-    link: `/posts/${file.slug}`,
-    isoDate: new Date(file.date).toISOString(),
+    id: article.slug,
+    title: article.title,
+    link: `/posts/${article.slug}`,
+    isoDate: new Date(article.date).toISOString(),
     source: 'yend' as const,
   };
 };
@@ -60,26 +60,18 @@ export const getQiitaArticles = async () => {
   return articles;
 };
 
-export const getMyPosts = () => {
-  const currentAbsolutePath = process.cwd();
-  const targetPath = `${currentAbsolutePath}/src/contents/posts`;
-  const fileNames = fs.readdirSync(targetPath);
+export const getMyArticles = async () => {
+  const posts = await getPosts();
+  const articles = posts.map(post => {
+    return {
+      title: post.meta.title,
+      date: post.meta.date,
+      draft: post.meta.draft,
+      slug: post.slug,
+    };
+  });
 
-  const mdxFiles = Promise.all(
-    fileNames.map(async fileName => {
-      const file = (await import(`@/contents/posts/${fileName}`)) as {
-        meta: Meta;
-      };
-      return {
-        title: file.meta.title,
-        date: file.meta.date,
-        slug: `${fileName.replace('.mdx', '')}`,
-        draft: file.meta.draft,
-      };
-    })
-  );
-
-  return mdxFiles;
+  return articles;
 };
 
 export const sortArticlesByIsoDate = (articles: Article[]) => {

@@ -1,10 +1,10 @@
 import {
   getZennArticles,
   getQiitaArticles,
-  getMyPosts,
+  getMyArticles,
   normalizeZennArticle,
   normalizeQiitaArticle,
-  normalizeMyPosts,
+  normalizeMyArticles,
   sortArticlesByIsoDate,
 } from '../../utils/articles';
 
@@ -13,12 +13,12 @@ import { ArticlesPresentation } from './presentation';
 export const ArticlesContainer = async () => {
   const zennArticles = await getZennArticles();
   const qiitaArticles = await getQiitaArticles();
-  const posts = await getMyPosts();
+  const myArticles = (await getMyArticles()).filter(article => !article.draft);
 
   const articles = [
     ...zennArticles.map(normalizeZennArticle),
     ...qiitaArticles.map(normalizeQiitaArticle),
-    ...posts.filter(article => !article.draft).map(normalizeMyPosts),
+    ...myArticles.map(normalizeMyArticles),
   ];
 
   const sortedArticles = sortArticlesByIsoDate(articles);

@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     ...SITE_META.openGraph,
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+  },
 };
 
 const Home = () => {
