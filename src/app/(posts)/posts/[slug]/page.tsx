@@ -62,6 +62,7 @@ export const generateMetadata = async ({
       url: `${SITE_META.openGraph.url}/posts/${slug}/`,
       siteName: SITE_META.openGraph.siteName,
       locale: SITE_META.openGraph.locale,
+      images: SITE_META.openGraph.images,
       type: 'article',
       publishedTime,
       authors: ['yend724'],

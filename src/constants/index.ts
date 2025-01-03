@@ -9,7 +9,7 @@ export const SITE_META = {
     locale: 'ja_JP',
     images: [
       {
-        url: '/images/ogp.png',
+        url: 'https://yend.dev/images/ogp.png',
         width: 1200,
         height: 630,
       },
