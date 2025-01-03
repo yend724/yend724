@@ -83,7 +83,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     th: props => <th className="border px-2 py-1" {...props} />,
     td: props => <td className="border px-2 py-1" {...props} />,
     hr: props => (
-      <hr className="border-t my-6 border-neutral-200 opacity-80" {...props} />
+      <hr className="my-6 border-t border-neutral-200 opacity-80" {...props} />
     ),
     blockquote: props => (
       <blockquote
