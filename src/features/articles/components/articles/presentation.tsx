@@ -34,10 +34,10 @@ export const ArticlesPresentation: React.FC<Props> = ({ articles }) => {
         ))}
       </fieldset>
       <div className="grid gap-y-8">
-        {articles.map(article => (
+        {filteredArticles.map(article => (
           <Article key={article.id} article={article} />
         ))}
-        {articles.length === 0 && <p>記事が見つかりませんでした。</p>}
+        {filteredArticles.length === 0 && <p>記事が見つかりませんでした。</p>}
       </div>
     </div>
   );
