@@ -3,15 +3,6 @@
 @tailwind utilities;
 
 :root {
-  --neumorphism-shadow-color-01: #a0a0a0;
-  --neumorphism-shadow-color-02: #ffffff;
-}
-:root:where([data-color-mode='light']) {
-  --neumorphism-shadow-color-01: #a0a0a0;
-  --neumorphism-shadow-color-02: #ffffff;
-  color-scheme: light dark;
-}
-:root:where([data-color-mode='dark']) {
   --neumorphism-shadow-color-01: #1b1b1b;
   --neumorphism-shadow-color-02: #313131;
   color-scheme: light dark;

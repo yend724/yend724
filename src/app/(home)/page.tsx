@@ -20,17 +20,13 @@ const Home = () => {
     <div className="grid gap-16">
       <section className="grid gap-8">
         <div className="flex flex-wrap items-center justify-between gap-4">
-          <h2 className="text-xl font-semibold text-black dark:text-white">
-            投稿一覧
-          </h2>
+          <h2 className="text-xl font-semibold text-white">投稿一覧</h2>
         </div>
         <Articles />
       </section>
       <section className="grid gap-8">
         <div className="flex flex-wrap items-center justify-between gap-4">
-          <h2 className="text-xl font-semibold text-black dark:text-white">
-            作ったもの
-          </h2>
+          <h2 className="text-xl font-semibold text-white">作ったもの</h2>
         </div>
         <MyWorks />
       </section>

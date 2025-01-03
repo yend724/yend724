@@ -12,7 +12,7 @@ export const PageTitle: React.FC<Props> = ({ title, description }) => {
         <div className="size-12">
           <ProfileIcon />
         </div>
-        <h1 className="text-wrap text-left text-3xl font-semibold text-black dark:text-white">
+        <h1 className="text-wrap text-left text-3xl font-semibold  text-white">
           {title}
         </h1>
       </div>

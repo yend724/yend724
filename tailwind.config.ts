@@ -3,7 +3,6 @@ import plugin from 'tailwindcss/plugin';
 
 const config: Config = {
   content: ['./src/**/*.{ts,tsx,mdx}'],
-  darkMode: ['selector', '[data-color-mode="dark"]'],
   theme: {},
   plugins: [
     plugin(({ addVariant }) => {

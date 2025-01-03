@@ -1,1 +1,0 @@
-export { Moon as DarkMode } from 'lucide-react';

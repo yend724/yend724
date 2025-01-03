@@ -77,20 +77,17 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       />
     ),
     a: props => (
-      <Link
-        className="text-sky-700 underline hover:no-underline dark:text-sky-400"
-        {...props}
-      />
+      <Link className="text-sky-400 underline hover:no-underline" {...props} />
     ),
     table: props => <table className="my-6 border-collapse" {...props} />,
     th: props => <th className="border px-2 py-1" {...props} />,
     td: props => <td className="border px-2 py-1" {...props} />,
     hr: props => (
-      <hr className="my-6 border-1 border-neutral-200 opacity-80" {...props} />
+      <hr className="border-t my-6 border-neutral-200 opacity-80" {...props} />
     ),
     blockquote: props => (
       <blockquote
-        className="my-6 border-l-4 pl-4 border-neutral-200 opacity-80"
+        className="my-6 border-l-4 border-neutral-200 pl-4 opacity-80"
         {...props}
       />
     ),
