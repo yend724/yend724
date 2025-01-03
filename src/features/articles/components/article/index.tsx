@@ -19,6 +19,7 @@ export const Article: React.FC<Props> = ({ article }) => {
               year: 'numeric',
               month: '2-digit',
               day: '2-digit',
+              timeZone: 'Asia/Tokyo',
             })}
           </span>
           <span>に公開</span>

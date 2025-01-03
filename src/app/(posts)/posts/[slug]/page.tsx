@@ -11,7 +11,9 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
     <div className="w-full space-y-12 overflow-hidden">
       <div className="grid gap-y-2">
         <time
-          dateTime={new Date(meta.date).toLocaleDateString('ja-JP')}
+          dateTime={new Date(meta.date).toLocaleDateString('ja-JP', {
+            timeZone: 'Asia/Tokyo',
+          })}
           className="flex gap-x-1 text-sm opacity-80"
         >
           <span>
@@ -19,6 +21,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
               year: 'numeric',
               month: '2-digit',
               day: '2-digit',
+              timeZone: 'Asia/Tokyo',
             })}
           </span>
           <span>に公開</span>
