@@ -1,5 +1,4 @@
 import { ProfileIcon } from '@/components/profile-icon';
-// import { ColorModeSwitch } from '@/components/color-mode-switch';
 
 type Props = {
   title: string;

@@ -1,19 +1,19 @@
-'use client';
-import { useState } from 'react';
+// 'use client';
+// import { useState } from 'react';
 import type { Article as ArticleInterface } from '../../types/';
 import { Article } from '../article';
-import { FILTER, FILTER_KEYS, FILTER_MAP } from '../../constants';
+// import { FILTER, FILTER_KEYS, FILTER_MAP } from '../../constants';
 
 type Props = {
   articles: ArticleInterface[];
 };
 export const ArticlesPresentation: React.FC<Props> = ({ articles }) => {
-  const [filters, setFilters] = useState<typeof FILTER>(FILTER);
-  const filteredArticles = articles.filter(article => filters[article.source]);
+  // const [filters, setFilters] = useState<typeof FILTER>(FILTER);
+  // const filteredArticles = articles.filter(article => filters[article.source]);
 
   return (
     <div className="space-y-8">
-      <fieldset className="flex flex-wrap gap-4">
+      {/* <fieldset className="flex flex-wrap gap-4">
         {FILTER_KEYS.map(filter => (
           <label
             key={filter}
@@ -32,12 +32,12 @@ export const ArticlesPresentation: React.FC<Props> = ({ articles }) => {
             <span>{FILTER_MAP[filter]}</span>
           </label>
         ))}
-      </fieldset>
+      </fieldset> */}
       <div className="grid gap-y-8">
-        {filteredArticles.map(article => (
+        {articles.map(article => (
           <Article key={article.id} article={article} />
         ))}
-        {filteredArticles.length === 0 && <p>記事が見つかりませんでした。</p>}
+        {articles.length === 0 && <p>記事が見つかりませんでした。</p>}
       </div>
     </div>
   );
