@@ -23,9 +23,7 @@ const RootLayout = ({
           </div>
         </div>
       </header>
-      <main className="mx-auto block w-full max-w-5xl overflow-hidden">
-        {children}
-      </main>
+      <main className="mx-auto block w-full max-w-5xl">{children}</main>
       <Footer />
     </div>
   );

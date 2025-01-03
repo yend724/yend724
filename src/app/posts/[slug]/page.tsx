@@ -5,7 +5,7 @@ import { getPosts, getPost } from '@/utils/posts';
 const MDX_EXTENSION = '.mdx';
 const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const slug = (await params).slug;
-  const { default: Content, meta } = await getPost(`${slug}${MDX_EXTENSION}`);
+  const { default: Component, meta } = await getPost(`${slug}${MDX_EXTENSION}`);
 
   return (
     <div className="w-full space-y-12 overflow-hidden">
@@ -29,7 +29,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
         <h1 className="text-3xl font-bold">{meta.title}</h1>
       </div>
       <div>
-        <Content />
+        <Component />
       </div>
     </div>
   );

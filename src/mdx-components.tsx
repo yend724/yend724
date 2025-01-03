@@ -85,15 +85,12 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ),
     th: props => (
       <th
-        className="text-nowrap text-start py-2 [&:not(:first-of-type,:last-of-type)]:px-4"
+        className="text-nowrap py-2 text-start [&:not(:first-of-type)]:pl-4"
         {...props}
       />
     ),
     td: props => (
-      <td
-        className="py-1 [&:not(:first-of-type,:last-of-type)]:px-4"
-        {...props}
-      />
+      <td className="py-2 align-top [&:not(:first-of-type)]:pl-4" {...props} />
     ),
     hr: props => (
       <hr className="my-6 border-t border-neutral-200 opacity-80" {...props} />
