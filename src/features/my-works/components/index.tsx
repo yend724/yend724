@@ -6,7 +6,7 @@ export const MyWorks = () => {
     <div className="grid gap-y-8">
       {MY_WORKS.map((work, index) => (
         <article key={index}>
-          <Link href={work.url} className="group grid gap-2">
+          <Link href={work.url} className="group grid gap-2 w-fit">
             <h3 className="text-lg font-semibold group-hover:underline">
               {work.title}
             </h3>
