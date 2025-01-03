@@ -79,9 +79,22 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     a: props => (
       <Link className="text-sky-400 underline hover:no-underline" {...props} />
     ),
-    table: props => <table className="my-6 border-collapse" {...props} />,
-    th: props => <th className="border px-2 py-1" {...props} />,
-    td: props => <td className="border px-2 py-1" {...props} />,
+    table: props => <table className="my-6 border-separate" {...props} />,
+    thead: props => (
+      <thead className="sticky top-0 bg-neutral-800" {...props} />
+    ),
+    th: props => (
+      <th
+        className="text-nowrap text-start py-2 [&:not(:first-of-type,:last-of-type)]:px-4"
+        {...props}
+      />
+    ),
+    td: props => (
+      <td
+        className="py-1 [&:not(:first-of-type,:last-of-type)]:px-4"
+        {...props}
+      />
+    ),
     hr: props => (
       <hr className="my-6 border-t border-neutral-200 opacity-80" {...props} />
     ),
