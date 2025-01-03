@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { MyWorks } from '@/features/my-works/components';
 import { Articles } from '@/features/articles/components';
 import { SITE_META } from '@/constants';
-import OGP_IMAGE from '@/assets/images/ogp.png';
 
 export const metadata: Metadata = {
   title: SITE_META.title,
