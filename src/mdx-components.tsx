@@ -60,7 +60,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ol: props => (
       <ol className="my-6 list-inside list-decimal pl-8 -indent-8" {...props} />
     ),
-    li: props => <li className="my-2 text-base" {...props} />,
+    li: props => <li className="my-2 flex flex-wrap text-base" {...props} />,
     pre: ({ children }) => {
       const [language] = children.props.className?.split(':') ?? [''];
       const formattedLanguage = language.replace('language-', '');
@@ -79,6 +79,18 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     a: props => (
       <Link
         className="text-sky-700 underline hover:no-underline dark:text-sky-400"
+        {...props}
+      />
+    ),
+    table: props => <table className="my-6 border-collapse" {...props} />,
+    th: props => <th className="border px-2 py-1" {...props} />,
+    td: props => <td className="border px-2 py-1" {...props} />,
+    hr: props => (
+      <hr className="my-6 border-1 border-neutral-200 opacity-80" {...props} />
+    ),
+    blockquote: props => (
+      <blockquote
+        className="my-6 border-l-4 pl-4 border-neutral-200 opacity-80"
         {...props}
       />
     ),

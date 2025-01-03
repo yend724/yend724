@@ -1,4 +1,5 @@
 import { SITE_META } from '@/constants';
+import { isProd } from '@/utils/env';
 import { getPosts, getPost } from '@/utils/posts';
 
 const MDX_EXTENSION = '.mdx';
@@ -32,9 +33,10 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 };
 
 export const generateStaticParams = async () => {
+  const isFiltering = isProd();
   const posts = await getPosts();
   const slugs = posts
-    .filter(post => !post.meta.draft)
+    .filter(post => (isFiltering ? !post.meta.draft : true))
     .map(post => ({
       slug: post.slug,
     }));

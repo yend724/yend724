@@ -13,7 +13,7 @@ import { ArticlesPresentation } from './presentation';
 export const ArticlesContainer = async () => {
   const zennArticles = await getZennArticles();
   const qiitaArticles = await getQiitaArticles();
-  const myArticles = (await getMyArticles()).filter(article => !article.draft);
+  const myArticles = await getMyArticles();
 
   const articles = [
     ...zennArticles.map(normalizeZennArticle),

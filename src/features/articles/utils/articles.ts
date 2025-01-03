@@ -1,6 +1,6 @@
 import Parser from 'rss-parser';
+import { isProd } from '@/utils/env';
 import { getPosts } from '@/utils/posts';
-
 import type {
   ZennRSSFeedItem,
   QiitaRSSFeedItem,
@@ -61,15 +61,18 @@ export const getQiitaArticles = async () => {
 };
 
 export const getMyArticles = async () => {
+  const isFiltering = isProd();
   const posts = await getPosts();
-  const articles = posts.map(post => {
-    return {
-      title: post.meta.title,
-      date: post.meta.date,
-      draft: post.meta.draft,
-      slug: post.slug,
-    };
-  });
+  const articles = posts
+    .map(post => {
+      return {
+        title: post.meta.title,
+        date: post.meta.date,
+        draft: post.meta.draft,
+        slug: post.slug,
+      };
+    })
+    .filter(post => (isFiltering ? !post.draft : true));
 
   return articles;
 };
