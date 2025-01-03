@@ -9,8 +9,6 @@ export const metadata: Metadata = {
   description: SITE_META.description,
   openGraph: {
     ...SITE_META.openGraph,
-    type: 'website',
-    images: [OGP_IMAGE.src],
   },
   twitter: {
     card: 'summary_large_image',

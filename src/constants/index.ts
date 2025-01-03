@@ -7,6 +7,13 @@ export const SITE_META = {
     url: 'https://yend.dev',
     siteName: 'YEND',
     locale: 'ja_JP',
+    images: [
+      {
+        url: '/images/ogp.png',
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
