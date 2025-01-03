@@ -79,7 +79,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     a: props => (
       <Link className="text-sky-400 underline hover:no-underline" {...props} />
     ),
-    table: props => <table className="my-6 border-separate" {...props} />,
+    table: props => <table className="my-6" {...props} />,
     thead: props => (
       <thead className="sticky top-0 bg-neutral-800" {...props} />
     ),
