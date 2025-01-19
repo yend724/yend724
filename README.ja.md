@@ -11,7 +11,7 @@
   - [X(旧Twitter)](https://x.com/yend724)
 
 ## 🌐 ポートフォリオ・技術ブログ
-⭐️ [yend.dev](https://yend.dev/) - プロジェクトや技術記事を掲載している個人サイト
+⭐️ [YEND.DEV](https://yend.dev/) - プロジェクトや技術記事を掲載している個人サイト
 
 ## 🛠 技術スタック
 ### 言語
