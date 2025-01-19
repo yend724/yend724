@@ -31,6 +31,11 @@
 ## 📈 使用言語の割合
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=yend724&layout=compact&theme=tokyonight)
 
+## 📅 アクティビティ
+[![GitHub Streak](https://streak-stats.demolab.com?user=yend724&theme=tokyonight&border_radius=5&short_numbers=true&date_format=M%20j%5B%2C%20Y%5D&card_width=600&card_height=200)](https://git.io/streak-stats)
+
+![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=yend724&theme=tokyonight)
+
 ## 🏆 GitHubトロフィー
 ![Trophy](https://github-profile-trophy.vercel.app/?username=yend724&theme=tokyonight)
 
