@@ -10,6 +10,9 @@ English | [日本語](./README.ja.md)
   - [Qiita](https://qiita.com/yend724)
   - [X(formerly Twitter)](https://x.com/yend724)
 
+## 🌐 Portfolio & Tech Blog
+⭐️ [yend.dev](https://yend.dev/) - Personal website featuring my projects and technical articles
+
 ## 🛠 Tech Stack
 
 ### Languages
@@ -37,6 +40,3 @@ English | [日本語](./README.ja.md)
 
 ## 🏆 GitHub Trophies
 ![Trophy](https://github-profile-trophy.vercel.app/?username=yend724&theme=tokyonight)
-
-## 🌐 Portfolio & Tech Blog
-⭐️ [yend.dev](https://yend.dev/) - Personal website featuring my projects and technical articles

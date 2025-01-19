@@ -10,6 +10,9 @@
   - [Qiita](https://qiita.com/yend724)
   - [X(旧Twitter)](https://x.com/yend724)
 
+## 🌐 ポートフォリオ・技術ブログ
+⭐️ [yend.dev](https://yend.dev/) - プロジェクトや技術記事を掲載している個人サイト
+
 ## 🛠 技術スタック
 ### 言語
 ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=TypeScript&logoColor=white)
@@ -36,6 +39,3 @@
 
 ## 🏆 GitHubトロフィー
 ![Trophy](https://github-profile-trophy.vercel.app/?username=yend724&theme=tokyonight)
-
-## 🌐 ポートフォリオ・技術ブログ
-⭐️ [yend.dev](https://yend.dev/) - プロジェクトや技術記事を掲載している個人サイト
