@@ -14,6 +14,7 @@
 ⭐️ [YEND.DEV](https://yend.dev/) - プロジェクトや技術記事を掲載している個人サイト
 
 ## 🛠 技術スタック
+
 ### 言語
 ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=TypeScript&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=black)
